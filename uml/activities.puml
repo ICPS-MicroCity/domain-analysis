@@ -1,0 +1,15 @@
+@startuml
+
+class ACTIVITY
+
+class EVENT
+class SERVICE
+
+EVENT -up-|> ACTIVITY
+SERVICE -up-|> ACTIVITY
+
+hide circle
+hide methods
+hide fields
+
+@enduml
