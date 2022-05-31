@@ -1,0 +1,60 @@
+@startuml
+!include class.metamodel.iuml
+
+class Activity {
+    + Time Period
+    + Duration
+}
+
+class Service
+class Event
+
+subclass(Activity, Event)
+subclass(Activity, Service)
+
+class Queue {
+    + Waiting Time
+}
+
+aggregation(Activity, Queue, 1, right)
+
+class Worker
+
+relation(Activity, Worker, manage, up)
+
+class Guest
+
+class Wearable
+
+class "Group of Guests" as Group
+
+composition(Guest, Group, 1..N, up)
+aggregation(Wearable, Guest, 1, up)
+
+relation(Guest, Activity, benefit from, right)
+relation(Group, Activity, benefit from, right)
+
+class Reward
+
+relation(Activity, Reward, generate, down)
+relation(Guest, Reward, receive, right)
+
+class MicroCity
+
+aggregation(Guest, MicroCity, 1..N, up)
+
+composition(Activity, MicroCity, 1..N, up)
+
+class Map
+
+aggregation(Map, MicroCity, 1, down)
+
+class Boundary
+class Fee
+
+aggregation(Boundary, MicroCity, 1, left)
+
+aggregation(Fee, MicroCity, 0..1, left)
+aggregation(Fee, Activity, 0..1, down)
+
+@enduml

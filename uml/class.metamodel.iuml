@@ -1,0 +1,45 @@
+@startuml
+hide methods
+hide circle
+'
+!unquoted procedure class($name)
+class $name
+!endprocedure
+'
+!unquoted procedure class($name, $alias)
+class $name as $alias
+!endprocedure
+'
+!unquoted procedure relation($class1, $class2, $name)
+$class1 -- $class2 : $name
+!endprocedure
+'
+!unquoted procedure relation($class1, $class2, $name, $direction)
+$class1 -$direction- $class2 : $name
+!endprocedure
+'
+!unquoted procedure subclass($class1, $class2)
+$class1 <|-- $class2
+!endprocedure
+'
+!unquoted procedure subclass($class1, $class2, $direction)
+$class1 <|-$direction- $class2
+!endprocedure
+'
+!unquoted procedure composition($class1, $class2, $cardinality)
+$class1 "$cardinality" --* $class2
+!endprocedure
+'
+!unquoted procedure composition($class1, $class2, $cardinality, $direction)
+$class1 "$cardinality" -$direction-* $class2
+!endprocedure
+'
+!unquoted procedure aggregation($class1, $class2, $cardinality)
+$class1 "$cardinality" --o $class2
+!endprocedure
+'
+!unquoted procedure aggregation($class1, $class2, $cardinality, $direction)
+$class1 "$cardinality" -$direction-o $class2
+!endprocedure
+'
+@enduml
