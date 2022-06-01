@@ -30,7 +30,7 @@ jobs:
       - name: Apply Semantic Versioning
         uses: anitvam/conventionalcommit-semantic-releasing@main
         with:
-          token: ${{ secrets.SR_API_TOKEN_GITHUB }}
+          token: ${{ secrets.MICRO_CITY_API_TOKEN_GITHUB }}
 
   delete-assets:
     needs: compile-and-release
