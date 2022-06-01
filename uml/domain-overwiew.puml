@@ -1,0 +1,28 @@
+@startuml domain-overview
+hide empty methods
+hide empty fields
+
+!theme mars
+
+class Wearable
+class GroupOfGuest
+Guest -up-* "1..N" GroupOfGuest
+
+
+class Guest
+Guest o-up- "1" Wearable
+MicroCity *-down- "1..N" Activity
+MicroCity o-up- Guest : "1..N"
+Guest "1" -down- "0..N" Reward : "receive"
+Reward "0..N" -- "1" Activity : "generate"
+Guest -- Activity : "benefit"
+
+class MicroCity
+class Reward
+
+class Activity {
+    + timePeriod
+    + duration
+}
+
+@enduml

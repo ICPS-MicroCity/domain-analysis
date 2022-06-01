@@ -1,0 +1,22 @@
+@startuml reward
+
+participant Oracle as oracle
+actor Guest as guest
+participant Activity as activity
+
+oracle -> guest : "suggest"
+activate guest
+
+alt follow suggestion
+guest -> guest : "take the suggestion"
+guest -> activity : "benefits from"
+activate activity
+return "reward"
+activity -> oracle : "inform"
+else ignore suggestion
+guest -> guest : "ignore suggestion"
+end
+return
+
+
+@enduml

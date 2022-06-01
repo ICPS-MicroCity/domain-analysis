@@ -1,0 +1,36 @@
+@startuml micro-city
+top to bottom direction
+
+hide empty methods
+hide empty fields
+
+class Map {
+    + boundary
+}
+class MicroCity
+class Oracle
+class Worker
+class Queue {
+    + waitingTime
+}
+class Activity {
+    + timePeriod
+    + duration
+}
+class Fee {
+    + amount
+}
+class Service
+class Event
+
+MicroCity o-up- "1" Map
+MicroCity -left- Oracle
+MicroCity -right- "1..N" Worker
+MicroCity *-down- "1..N" Activity
+MicroCity -right- Fee
+Activity o-left- Queue
+Activity -right- Fee
+Activity <|-down- Service
+Activity <|-down- Event
+
+@enduml

@@ -32,3 +32,52 @@ La seguente tabella mostra l'\textit{Ubiquitous Language} del dominio in analisi
     \caption{Ubiquitous language dell'ambito \textit{MicroCity}.}
     \label{tab:ul}
 \end{table}
+
+\section{Modello del dominio}\label{sec:modello-del-dominio}
+
+A seguito della definizione dei concetti del dominio, di seguito sono illustrati alcuni diagrammi che mostrano le relazioni
+tra essi.
+
+In figura~\ref{fig:domain-overview} vengono mostrati i principali elementi che costituiscono la \textit{Micro City}.
+In particolare, la \textit{Micro City} si compone di più \textit{Guest} che possono usufruire delle \textit{Activity} in essa
+contenute.
+Ogni \textit{Guest} possiede un \textit{Wearable} grazie al quale interagisce con \textit{Micro City}; un insieme di
+più \textit{Guest} definisce il \textit{GroupOfGuest}.
+Una \textit{Activity} può generare più \textit{Reward} che vengono ricevuti dai \textit{Guest} o \textit{GroupOfGuest}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{./img/domain_overview-0}
+    \caption{Diagramma delle classi che modella il dominio della \textit{Micro City}.}
+    \label{fig:domain-overview}
+\end{figure}
+
+\newpage
+
+In figura~\ref{fig:micro-city} viene mostrato un diagramma che rappresenta l'organizzazione della \textit{Micro City}.
+Quest'ultima infatti, è composta da una \textit{Map}, un \textit{Oracle} e più \textit{Worker}.
+Inoltre, sia le \textit{Activity} che la \textit{Micro City} potrebbero richiedere una \textit{Fee}, ovvero un compenso per
+poter accedervi.
+Sono modellati due tipologie di \textit{Activity}: \textit{Service} rappresenta un servizio generico continuamente operativo;
+\textit{Event} rappresenta un evento attivato in un memento specifico con una durata.
+\textit{Queue} rappresenta il tempo di attesa per poter accedere a una \textit{Activity}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./img/micro_city-0}
+    \caption{Diagramma delle classi che modella l'organizzazione della \textit{Micro City}.}
+    \label{fig:micro-city}
+\end{figure}
+
+\newpage
+
+In figura~\ref{fig:reward} è mostrato il diagramma di sequenza che rappresenta l'ottenimento di un reward da parte di un ospite.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./img/reward-0}
+    \caption{Diagramma di sequenza che mostra il comportamento generico dei reward.}
+    \label{fig:reward}
+\end{figure}
+
+\newpage
