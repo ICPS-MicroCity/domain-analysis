@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/ICPS-MicroCity/domain-analysis/compare/v0.2.0...v0.2.1) (2022-06-01)
+
+
+### Bug Fixes
+
+* remove smart from title ([5b32422](https://github.com/ICPS-MicroCity/domain-analysis/commit/5b3242287a05fe15aacd2669d2200dc77907a80a))
+
 # [0.2.0](https://github.com/ICPS-MicroCity/domain-analysis/compare/v0.1.0...v0.2.0) (2022-06-01)
 
 
