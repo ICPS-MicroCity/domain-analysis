@@ -1,9 +1,6 @@
 \usepackage[utf8]{inputenc}
-\usepackage[backend=biber, style=numeric, sorting=ynt]{biblatex}
-\addbibresource{bibliography.bib}
-
 \usepackage[italian]{babel}
-
+\renewcommand{\contentsname}{Indice}
 \linespread{1.2}
 
 \usepackage{geometry}
@@ -18,10 +15,6 @@
 \usepackage{alltt, fancyvrb}
 \usepackage{subfigure}
 \usepackage{wrapfig}
-\usepackage{algorithmic}
-\usepackage{fontenc}
-\usepackage{amsmath,stmaryrd,mathtools,algorithm}
-\usepackage{amssymb}
 \usepackage[italian]{cleveref}
 \usepackage{mdframed}
 
@@ -30,9 +23,9 @@
 \usepackage{listings}
 \definecolor{mygray}{rgb}{0.8,0.8,0.8}
 \lstset{%
-basicstyle=\ttfamily,
-breaklines = true,
-backgroundcolor=\color{mygray},
+    basicstyle=\ttfamily,
+    breaklines = true,
+    backgroundcolor=\color{mygray},
 }
 
 
@@ -74,5 +67,9 @@ backgroundcolor=\color{mygray},
 
 \newcommand{\ul}[2]{
     \textbf{#1} & #2\\
+    \hline
+}
+\newcommand{\case}[4]{
+    #1 & #2 & #3 & #4\\
     \hline
 }
