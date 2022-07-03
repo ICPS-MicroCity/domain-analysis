@@ -1,9 +1,14 @@
 \section{Domain Model}
 \label{sec:model}
 
-After defining the fundamental concepts of the domain, it is important to underline which relationship they have. The following diagrams show the different types of relationship that define the domain's model.
+After defining the fundamental concepts of the domain, it is important to underline the relationships among them.
+The following diagrams show the different types of relationships that define the domain's model.
 
-The figure \ref{fig:domain-overview} shows the principal elements of a \textit{Micro City}. In particular, a \textit{Micro City} is composed of many guests that may benefit from activities inside it. Each guest owns a wearable device that allows to interact with the \textit{Micro City}. Many guests moving together compose a group of guests. An activity may give rewards to guests (or group of guests) that follow recommendations.
+The figure \ref{fig:domain-overview} shows the main elements of a \textit{Micro City}.
+In particular, a \textit{Micro City} is made up of many guests that may benefit from activities inside it.
+Each guest owns a wearable device that allows them to interact with the \textit{Micro City}.
+Many guests moving together compose a group of guests.
+An activity may give rewards to the guests (or groups of guests) that follow recommendations.
 
 \begin{figure}[H]
     \centering
@@ -14,7 +19,11 @@ The figure \ref{fig:domain-overview} shows the principal elements of a \textit{M
 
 \newpage
 
-The figure \ref{fig:micro-city} shows a diagram representing a \textit{Micro City}'s organization. A \textit{Micro City} has a map and many workers. Both the activities and the \textit{Micro City} may request the payment of a fee, that is a certain amount of money in order to access to them. There are two types of activities: services, that are continuously available during a \textit{Micro City}'s lifetime, and events, that takes place in a specific moment and has a limited duration. A queue represents the waiting time before that a guest can benefit from an activity.
+The figure \ref{fig:micro-city} shows a diagram representing the organization of a \textit{Micro City}.
+A \textit{Micro City} has a map and many workers.
+Both activities and the \textit{Micro City} itself may require the payment of a fee, that is an amount of money needed in order to access them.
+There are two types of activities: services, that are continuously available during the \textit{Micro City}'s lifetime, and events, that take place in a specific moment and have a limited duration.
+Queues may form because of the waiting time needed before a guest can benefit from an activity.
 
 \begin{figure}[H]
     \centering
