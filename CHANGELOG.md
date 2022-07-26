@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/ICPS-MicroCity/domain-analysis/compare/v0.3.0...v0.3.1) (2022-07-26)
+
+
+### Bug Fixes
+
+* change index to english ([5c20985](https://github.com/ICPS-MicroCity/domain-analysis/commit/5c20985cd3804287a740493211ef4784a55f62a5))
+
 # [0.3.0](https://github.com/ICPS-MicroCity/domain-analysis/compare/v0.2.1...v0.3.0) (2022-07-03)
 
 
